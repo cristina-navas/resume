@@ -6,280 +6,185 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 	
 	<title>Cristina Navas Jiménez</title>
-
-	<style>
-	html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+	
+	<style type="text/css">
+	@import url(
+	https://fonts.googleapis.com/css?family=Lato:400,700
+);
+body {
+	background: #fff;
+	font-family: Lato, sans-serif;
+	margin: 0 0 80px;
+}
+a {
+	color: #2ecc71;
+}
+a:focus,
+a:hover {
+	color: #f1c40f;
+	text-decoration: none;
+}
+p {
+	line-height: 1.5;
+	margin: 0;
+}
+p + p {
+	margin-top: 10px;
+}
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1.5;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-@import url(http://fonts.googleapis.com/css?family=Roboto);
-html,
-button,
-input,
-textarea {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', sans-serif;
-}
-
-:root {
-  --text: #333333;
-  --headline: #c9cccf;
-  --sub-headline: #96999b;
-  --primary: rgb(207, 214, 255);
-  --secondary: rgb(238, 245, 255);
-}
-
-body {
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  max-width: 600px;
-  color: var(--text);
-}
-
-h1 {
-  font-size: 26px;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-h2 {
-  margin-top: 2rem;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--headline);
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-}
-
-h3 {
-  display: block;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 1.2px;
-  margin-top: 0.5rem;
-}
-
 h4 {
-  font-size: 14px;
-  color: var(--sub-headline);
-  padding-top: 0.5rem;
-  padding-bottom: 0.25rem;
+	margin-top: 0
 }
-
-p,
+section {
+	margin-top: 30px;
+}
 li {
-  margin-bottom: 0.25rem;
-  font-size: 14px;
+	line-height: 1.8;
+	list-style: none;
+}
+li:before {
+	content: "\f052";
+	float: left;
+	font: 13px Octicons;
+	margin-top: 6px;
+	margin-left: -20px;
+	opacity: .1;
+	position: absolute;
+}
+blockquote {
+	border-left: 5px solid #e7e9ec;
+	font-size: 14px;
+}
+em {
+	color: #95a5a6;
+	font-weight: normal;
+	font-style: normal;
+}
+h4 span:first-child {
+	color: #000;
+	font-weight: bold;
+}
+.container {
+	max-width: 750px;
+	padding: 0 30px;
+}
+.col-sm-6 {
+	margin-bottom: 10px;
+}
+.col-sm-12 h4 {
+	margin-top: 12px; 
+}
+.col-sm-12 + .col-sm-12 {
+	margin-top: 30px;
+}
+#header {
+	background: #f4f6f6;
+	padding: 50px 0;
+	margin-bottom: 30px;
+}
+#header h2 {
+	color: #95a5a6;
+	font-size: 24px;
+}
+#content h3 {
+	color: #f1c40f;
+	font-size: 26px;
+	margin-top: -4px;
+}
+#content aside {
+	text-align: right;
+	padding-right: 30px;
+}
+#profiles .network {
+	text-transform: capitalize;
+}
+#work .position,
+#volunteer .position {
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+#education .area {
+	font-weight: bold;
+}
+#education .area:before {
+	content: "\f0d7";
+	font: 16px Octicons;
+	margin-right: 6px;
+}
+#education .studyType {
+	margin-left: 25px;
+}
+#awards .summary,
+#publications .summary {
+	margin-top: 8px;
+}
+#publications .website a:before {
+	content: attr(href);
 }
 
-a {
-  transition: box-shadow 160ms ease 0s;
-  box-shadow: var(--secondary) 0px -9px 0px inset;
-  border-bottom: 2px solid var(--primary);
-  text-decoration: none;
-  color: inherit;
+@media (min-width: 480px) {
+	.strike-through {
+		border-top: 1px solid #f4f6f6;
+		height: 20px;
+		margin-top: 12px;
+		margin-bottom: 20px;
+		position: relative;
+	}
+	.strike-through span,
+	.strike-through a {
+		background: #fff;
+		position: absolute;
+	}
+	.strike-through span:first-child {
+		padding-right: 20px;
+		margin-top: -12px;
+	}
+	.strike-through span + span {
+		font-size: 14px;
+		margin-top: -10px;
+		padding-left: 20px;
+		right: 0;
+	}
 }
-
-a:hover {
-  box-shadow: var(--primary) 0px -1.2em 0px inset;
+@media (max-width: 768px) {
+	.col-sm-6:last-child {
+		margin-bottom: 0px;
+	}
+	#content aside {
+		margin-bottom: 20px;
+		padding-right: 0;
+		text-align: left;
+	}
+	#publications .website a:before {
+		content: "View publication";
+	}
 }
-
-section ul {
-  margin-top: 0.5rem;
-  margin-left: 2.5rem;
-  list-style: disc;
-}
-
-.contact {
-  padding-top: 2rem;
-}
-
-.contact span {
-  width: 100px;
-  display: inline-block;
-}
-
-.skills ul {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.skills li {
-  margin-bottom: 1rem;
-  margin-right: 0.5rem;
-  padding: 0.25rem 1rem;
-  background-color: var(--secondary);
-  white-space: nowrap;
-}
-
-.position {
-  margin-bottom: 1.5rem;
-}
-
-.languages {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.grey {
-  color: var(--sub-headline);
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.pdf {
-  color: var(--headline);
-  transition: color ease 160ms;
-  border: none;
-  box-shadow: none;
-}
-
-.pdf:hover {
-  box-shadow: none;
-  color: var(--sub-headline);
-}
-
-@media print {
-  body {
-    padding: 0rem;
-  }
-
-  section,
-  div {
-    page-break-inside: avoid;
-  }
-
-  .pdf {
-    display: none;
-  }
+@media (max-width: 480px) {
+	h1 {
+		font-size: 26px;
+	}
+	.date {
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	.strike-through span:first-child {
+		margin-bottom: 7px;
+	}
+	.strike-through span {
+		display: block;
+	}	
+	#header {
+		margin-bottom: 10px;
+		padding: 40px 0;
+	}
+	#actions {
+		display: none;
+	}
 }
 
 	</style>
@@ -287,182 +192,281 @@ section ul {
 	</head>
 	<body>
 	
-	<div id="resume">
-		  <div class="header">
-		    <h1>Cristina Navas Jiménez</h1>
-		  </div>
-		  
-		  <p>Educadora Ambiental</p>
-		
-		    <p class="grey">
-		      , ES
-		
-		        | cristina.navas869@gmail.com
-		
-		    </p>
-		
-		    <p class="grey">Actualmente me encuentro en una etapa en la que estoy dispuesta a enfrentarme a los retos que se me interpongan. 
-		Autodidacta y con capacidad de ejecución, soy una profesional seria, cuya meta, es seguir cultivando y potenciando mis habilidades profesionales y la consecución de unos objetivos ambiciosos, siempre buscando el beneficio y mejora ambiental como resultado.
-		Mis habilidades comunicativas y sociales me convierten en un activo con el que es fácil trabajar y comunicarse.
-		Actualmente me encuentro “pluriempleada” (dada la situación actual) en busca de “estabilidad”.</p>
-		
-				<section class="position">
-						<h2>Work Experience</h2>
-					<h3>
-							
-					</h3>
-		
-						<h4>
-						    Monitora ambiental en Brutal
-						
-						    |
-						    Feb 2020
-						  
-						      - Current
-						</h4>
-						
-						  <div class="summary">
-						    <p>Actividades eventuales de educación ambiental para toda la familia.
-						Safaris y rutas por y para todos los públicos.
-						Creación de actividades adaptadas a cada nivel, siempre buscando la mayor sostenibilidad en cada una de ellas.
-						Desarrollo de planes y guías didácticas de actividades para centros educativos.
-						</p>
-						  </div>
-						
-				</section>
-				<section class="position">
-					<h3>
-							
-					</h3>
-		
-						<h4>
-						    Técnico medioambiental en Ekotonia Consultores
-						
-						    |
-						    Aug 2022
-						  
-						    -
-						    Invalid date
-						</h4>
-						
-						  <div class="summary">
-						    <p>Realización de proyectos y programas de educación ambiental.
-						Atención al cliente personalizada:
-						Auditoría ambiental, redacción de proyectos.
-						Certificaciones ambientales.
-						Gestión de redes sociales.
-						Redacción de Manuales de Buenas Prácticas y diversa cartelería.</p>
-						  </div>
-						
-				</section>
-				<section class="position">
-					<h3>
-							
-					</h3>
-		
-						<h4>
-						    Educadora en Centro Delta Ayamonte
-						
-						    |
-						    Invalid date
-						  
-						    -
-						    Aug 2022
-						</h4>
-						
-						  <div class="summary">
-						    <p>Clases con alumnos de todos los niveles, desde primaria hasta bachillerato, en materia de matemáticas, biología, física y química (principalmente). Asesoramiento, apoyo, técnicas de estudio, preparación de exámenes y prueba de acceso a la universidad.</p>
-						  </div>
-						
-				</section>
-				<section class="position">
-					<h3>
-							
-					</h3>
-		
-						<h4>
-						    Alumno colaborador Dpt. Química Orgánica en Universidad de Córdoba
-						
-						    |
-						    Invalid date
-						  
-						    -
-						    Invalid date
-						</h4>
-						
-						  <div class="summary">
-						    <p>Durante mi estancia en esta universidad, la curiosidad sobre la química y el trabajo en el laboratorio ha sido el pilar de mi educación. Como alumna colaborador del Departamento de Química Orgánica he podido aprender a usar todo tipo de equipo y técnicas, he tenido la suerte de colaborar en proyectos, trabajos e investigaciones de diversa índole y así como con una gran variedad de profesionales del sector, llegando en ocasiones a realizar mis propios  trabajos para completar las investigaciones de mis superiores.</p>
-						  </div>
-						
-				</section>
-				<section class="position">
-					<h3>
-							
-					</h3>
-		
-						<h4>
-						    Cajera en Supermercados El Jamon
-						
-						    |
-						    Invalid date
-						  
-						    -
-						    Invalid date
-						</h4>
-						
-						
-				</section>
-		  <h2>Languages</h2>
-		  <section class='position languages'>
-		      <div>
-		        <p> Espanol </p>
-		        <p class='grey'> Nativa </p>
-		      </div>
-		      <div>
-		        <p> Ingles </p>
-		        <p class='grey'> High </p>
-		      </div>
-		  </section>
-				<section class="position">
-						<h2>Education</h2>
-					<h3>Universidad de Córdoba</h3>
-					<h4>
-						Grado en Ciencias Ambientales
-						  |
-						  Invalid date
-						
-						  -
-						  Invalid date
-					</h4>
-				</section>
-				<section class="position">
-					<h3>Universidad de Huelva</h3>
-					<h4>
-						Grado en Ciencias Ambientales
-						  |
-						  Invalid date
-						
-						  -
-						  Invalid date
-					</h4>
-				</section>
-				<section class="position">
-					<h3>COAMBA</h3>
-					<h4>
-						Curso de Peritaje Ambiental
-						  |
-						  Invalid date
-						
-						  -
-						  Invalid date
-					</h4>
-				</section>
-				<section class="position">
-					<h3>Junta de Andalucía</h3>
-					<h4>
-						Cursos Online
-						
-					</h4>
-				</section>
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9 col-sm-push-3">
+					<h1>
+						Cristina Navas Jiménez
+					</h1>
+					<h2>
+						Educadora Ambiental
+					</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="content" class="container">
+
+	<section id="contact" class="row">
+		<aside class="col-sm-3">
+			<h3>Contacto</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<strong>Email</strong>
+				<div class="email">cristina.navas869@gmail.com</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section id="about" class="row">
+		<aside class="col-sm-3">
+			<h3>Acerca De</h3>
+		</aside>
+		<div class="col-sm-9">
+			<p>Actualmente me encuentro en una etapa en la que estoy dispuesta a enfrentarme a los retos que se me interpongan. 
+Autodidacta y con capacidad de ejecución, soy una profesional seria, cuya meta, es seguir cultivando y potenciando mis habilidades profesionales y la consecución de unos objetivos ambiciosos, siempre buscando el beneficio y mejora ambiental como resultado.
+Mis habilidades comunicativas y sociales me convierten en un activo con el que es fácil trabajar y comunicarse.
+Actualmente me encuentro “pluriempleada” (dada la situación actual) en busca de “estabilidad”.</p>
+		</div>
+	</section>
+	<section id="profiles" class="row">
+		<aside class="col-sm-3">
+			<h3>Perfiles</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+				<div class="col-sm-6">
+					<strong class="network">
+						LinkedIn
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="https://www.linkedin.com/in/cristina-navas/">cristina-navas</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="work" class="row">
+		<aside class="col-sm-3">
+			<h3>Trabajo</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span></span>
+					<span class="date">
+						2020-02-28 — 
+					</span>
+				</h4>
+				<div class="position">
+					Monitora ambiental en Brutal
+				</div>
+				<div class="summary">
+					<p>Actividades eventuales de educación ambiental para toda la familia.
+Safaris y rutas por y para todos los públicos.
+Creación de actividades adaptadas a cada nivel, siempre buscando la mayor sostenibilidad en cada una de ellas.
+Desarrollo de planes y guías didácticas de actividades para centros educativos.
+</p>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span></span>
+					<span class="date">
+						2022-07-31 — 2022-12-31
+					</span>
+				</h4>
+				<div class="position">
+					Técnico medioambiental en Ekotonia Consultores
+				</div>
+				<div class="summary">
+					<p>Realización de proyectos y programas de educación ambiental.
+Atención al cliente personalizada:
+Auditoría ambiental, redacción de proyectos.
+Certificaciones ambientales.
+Gestión de redes sociales.
+Redacción de Manuales de Buenas Prácticas y diversa cartelería.</p>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span></span>
+					<span class="date">
+						2022-04-30 — 2022-07-31
+					</span>
+				</h4>
+				<div class="position">
+					Educadora en Centro Delta Ayamonte
+				</div>
+				<div class="summary">
+					<p>Clases con alumnos de todos los niveles, desde primaria hasta bachillerato, en materia de matemáticas, biología, física y química (principalmente). Asesoramiento, apoyo, técnicas de estudio, preparación de exámenes y prueba de acceso a la universidad.</p>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span></span>
+					<span class="date">
+						2013-09-30 — 2017-09-30
+					</span>
+				</h4>
+				<div class="position">
+					Alumno colaborador Dpt. Química Orgánica en Universidad de Córdoba
+				</div>
+				<div class="summary">
+					<p>Durante mi estancia en esta universidad, la curiosidad sobre la química y el trabajo en el laboratorio ha sido el pilar de mi educación. Como alumna colaborador del Departamento de Química Orgánica he podido aprender a usar todo tipo de equipo y técnicas, he tenido la suerte de colaborar en proyectos, trabajos e investigaciones de diversa índole y así como con una gran variedad de profesionales del sector, llegando en ocasiones a realizar mis propios  trabajos para completar las investigaciones de mis superiores.</p>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span></span>
+					<span class="date">
+						2016-06-30 — 2016-09-30
+					</span>
+				</h4>
+				<div class="position">
+					Cajera en Supermercados El Jamon
+				</div>
+				<div class="summary">
+					<p></p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	
+	<section id="education" class="row">
+		<aside class="col-sm-3">
+			<h3>Educación</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Universidad de Córdoba</span>
+					<span class="date">
+						2012-12-31 — 2017-12-31
+					</span>
+				</h4>
+				<div class="studyType">
+					Grado en Ciencias Ambientales
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Universidad de Huelva</span>
+					<span class="date">
+						2017-12-31 — 2020-12-31
+					</span>
+				</h4>
+				<div class="studyType">
+					Grado en Ciencias Ambientales
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>COAMBA</span>
+					<span class="date">
+						2020-12-31 — 2021-12-31
+					</span>
+				</h4>
+				<div class="studyType">
+					Curso de Peritaje Ambiental
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Junta de Andalucía</span>
+					<span class="date">
+						 — 
+					</span>
+				</h4>
+				<div class="studyType">
+					Cursos Online
+				</div>
+				<h4>Courses</h4>
+				<ul class="courses">
+					<li>Iniciación a Python</li>
+					<li>Dinamizador/a de cursos elearning (Avanzado)</li>
+					<li>Retoque fotográfico con GIMP</li>
+					<li>Iniciación a la programación</li>
+					<li>Iniciación al diseño y a la programación web</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	
+	<section id="skills" class="row">
+		<aside class="col-sm-3">
+			<h3>Habilidades</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Resolución de problemas</h4>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="languages" class="row">
+		<aside class="col-sm-3">
+			<h3>Idiomas</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<div class="language">
+					<strong>Espanol</strong>
+				</div>
+				<div class="fluency">
+					Nativa
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="language">
+					<strong>Ingles</strong>
+				</div>
+				<div class="fluency">
+					High
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	
+	<section id="references" class="row">
+		<aside class="col-sm-3">
+			<h3>Referencias</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<blockquote class="reference">
+					<p>Reference…</p>
+					<p class="name">
+						<strong>— Jane Doe</strong>
+					</p>
+				</blockquote>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	</div>
+	
 	</body>
 </html>
