@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Cristina Navas Jiménez",
-    "label": "Educadora Ambiental",
+    "label": "Técnico en Educación Ambiental",
     "image": "",
     "email": "cristina.navas869@gmail.com",
     "summary": "Actualmente me encuentro en una etapa en la que estoy dispuesta a enfrentarme a los retos que se me interpongan. \nAutodidacta y con capacidad de ejecución, soy una profesional seria, cuya meta, es seguir cultivando y potenciando mis habilidades profesionales y la consecución de unos objetivos ambiciosos, siempre buscando el beneficio y mejora ambiental como resultado.\nMis habilidades comunicativas y sociales me convierten en un activo con el que es fácil trabajar y comunicarse.",
@@ -32,7 +32,7 @@
       "name": "EKOTONIA CONSULTORES",
       "position": "Técnico medioambiental en Ekotonia Consultores",
       "startDate": "2022-07-31",
-      "endDate": "2022-12-31",
+      "endDate": "",
       "highlights": [],
       "summary": "Realización de proyectos y programas de educación ambiental.\nAtención al cliente personalizada:\nAuditoría ambiental, redacción de proyectos.\nCertificaciones ambientales.\nGestión de redes sociales.\nRedacción de Manuales de Buenas Prácticas y diversa cartelería.",
       "url": "https://www.linkedin.com/company/1885266",
@@ -68,7 +68,7 @@
       "location": "Ayamonte, Huelva"
     }
   ],
-  "volunteer": [],
+  "volunteer": "Co-organizadora y monitora del Club Ciencias Ayamonte",
   "education": [
     {
       "institution": "Universidad de Córdoba",
@@ -106,13 +106,7 @@
       "reference": "Reference…"
     }
   ],
-  "certificates": [],
-  "publications": [],
-  "skills": [
-    {
-      "name": "Resolución de problemas",
-      "level": "",
-      "keywords": []
+
     }
   ],
   "languages": [
