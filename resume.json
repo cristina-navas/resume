@@ -5,7 +5,7 @@
     "label": "Técnico en Educación Ambiental",
     "image": "",
     "email": "cristina.navas869@gmail.com",
-    "summary": "Actualmente me encuentro en una etapa en la que estoy dispuesta a enfrentarme a los retos que se me interpongan. \nAutodidacta y con capacidad de ejecución, soy una profesional seria, cuya meta, es seguir cultivando y potenciando mis habilidades profesionales y la consecución de unos objetivos ambiciosos, siempre buscando el beneficio y mejora ambiental como resultado.\nMis habilidades comunicativas y sociales me convierten en un activo con el que es fácil trabajar y comunicarse.",
+    "summary": "Actualmente me encuentro en una etapa en la que estoy dispuesta a enfrentarme a los retos que se me interpongan. \nAutodidacta y con capacidad de ejecución, soy una profesional seria, cuya meta, es seguir cultivando y potenciando mis habilidades profesionales y la consecución de unos objetivos ambiciosos, siempre buscando el beneficio y mejora ambiental como resultado.\nMis habilidades comunicativas y sociales me convierten en un activo con el que es fácil trabajar y comunicarse",
     "location": {
       "countryCode": "ES",
       "address": "España"
@@ -20,21 +20,20 @@
   },
   "work": [
     {
-      "name": "BRUTAL",
-      "position": "Monitora ambiental en Brutal",
-      "startDate": "2020-02-28",
-      "highlights": [],
-      "summary": "Actividades eventuales de educación ambiental para toda la familia.\nSafaris y rutas por y para todos los públicos.\nCreación de actividades adaptadas a cada nivel, siempre buscando la mayor sostenibilidad en cada una de ellas.\nDesarrollo de planes y guías didácticas de actividades para centros educativos.\n",
-      "url": "https://www.linkedin.com/company/42803428",
-      "location": "Andalucía"
+      "name": "Desarrollo Circular Consultoria Ambiental",
+      "position": "Formador ambiental",
+      "startDate": "2023-02-01",
+      "endDate": "2023-03-03",
+      "summary": "Preparación, puesta en marcha e impartición de projecto charla-taller de educación ambiental por los centros de educación primaria de la ciudad de Huelva",
+      "url": "https://desarrollocircular.es",
+      "location": "Huelva"
     },
     {
       "name": "EKOTONIA CONSULTORES",
-      "position": "Técnico medioambiental en Ekotonia Consultores",
+      "position": "Técnico medioambiental",
       "startDate": "2022-07-31",
-      "endDate": "",
-      "highlights": [],
-      "summary": "Realización de proyectos y programas de educación ambiental.\nAtención al cliente personalizada:\nAuditoría ambiental, redacción de proyectos.\nCertificaciones ambientales.\nGestión de redes sociales.\nRedacción de Manuales de Buenas Prácticas y diversa cartelería.",
+      "endDate": "2023-02-26",
+      "summary": "Realización de proyectos y programas de educación ambiental.\nAtención al cliente personalizada:\nAuditoría ambiental, redacción de proyectos.\nCertificaciones ambientales.\nGestión de redes sociales.\nRedacción de Manuales de Buenas Prácticas y diversa cartelería",
       "url": "https://www.linkedin.com/company/1885266",
       "location": "Huelva"
     },
@@ -43,10 +42,16 @@
       "position": "Educadora en Centro Delta Ayamonte",
       "startDate": "2022-04-30",
       "endDate": "2022-07-31",
-      "highlights": [],
-      "summary": "Clases con alumnos de todos los niveles, desde primaria hasta bachillerato, en materia de matemáticas, biología, física y química (principalmente). Asesoramiento, apoyo, técnicas de estudio, preparación de exámenes y prueba de acceso a la universidad.",
-      "url": "",
+      "summary": "Clases con alumnos de todos los niveles, desde primaria hasta bachillerato, en materia de matemáticas, biología, física y química (principalmente). Asesoramiento, apoyo, técnicas de estudio, preparación de exámenes y prueba de acceso a la universidad",
       "location": "Ayamonte, Huelva"
+    },
+    {
+      "name": "BRUTAL",
+      "position": "Monitora ambiental en Brutal",
+      "startDate": "2020-02-28",
+      "summary": "Actividades eventuales de educación ambiental para toda la familia.\nSafaris y rutas por y para todos los públicos.\nCreación de actividades adaptadas a cada nivel, siempre buscando la mayor sostenibilidad en cada una de ellas.\nDesarrollo de planes y guías didácticas de actividades para centros educativos",
+      "url": "https://www.linkedin.com/company/42803428",
+      "location": "Andalucía"
     },
     {
       "name": "Universidad de Córdoba",
@@ -54,7 +59,7 @@
       "startDate": "2013-09-30",
       "endDate": "2017-09-30",
       "highlights": [],
-      "summary": "Durante mi estancia en esta universidad, la curiosidad sobre la química y el trabajo en el laboratorio ha sido el pilar de mi educación. Como alumna colaborador del Departamento de Química Orgánica he podido aprender a usar todo tipo de equipo y técnicas, he tenido la suerte de colaborar en proyectos, trabajos e investigaciones de diversa índole y así como con una gran variedad de profesionales del sector, llegando en ocasiones a realizar mis propios  trabajos para completar las investigaciones de mis superiores.",
+      "summary": "Como alumna colaborador del Departamento de Química Orgánica he podido aprender a usar todo tipo de equipo y técnicas, he tenido la suerte de colaborar en proyectos, trabajos e investigaciones de diversa índole y así como con una gran variedad de profesionales del sector",
       "url": "https://www.linkedin.com/company/78187",
       "location": "Córdoba, Andalucía, España"
     },
@@ -68,7 +73,13 @@
       "location": "Ayamonte, Huelva"
     }
   ],
-  "volunteer": "Co-organizadora y monitora del Club Ciencias Ayamonte",
+  "volunteer": [
+    {
+      "organization": "Club de Ciencias Ayamonte",
+      "position": "Monitora y Co-organizadora",
+      "summary": "Co-organizadora y monitora del Club Ciencias Ayamonte"
+    }
+  ],
   "education": [
     {
       "institution": "Universidad de Córdoba",
@@ -100,15 +111,6 @@
       ]
     }
   ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
-
-   
-  
   "languages": [
     {
       "language": "Espanol",
@@ -117,26 +119,6 @@
     {
       "language": "Ingles",
       "fluency": "High"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Project",
-      "description": "Description…",
-      "highlights": [
-        "Won award at AIHacks 2016"
-      ],
-      "keywords": [
-        "HTML"
-      ],
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "url": "https://project.com/",
-      "roles": [
-        "Team Lead"
-      ],
-      "entity": "Entity",
-      "type": "application"
     }
   ],
   "meta": {
