@@ -20,6 +20,14 @@
   },
   "work": [
     {
+      "name": "Ecoherencia S. Coop. And.",
+      "position": "Educador ambiental",
+      "startDate": "2023-06-01",
+      "summary": "Projecto charla-taller de educación ambiental sobre energías renovables en el Centro Energía Viva Andalucía (CEVA) ",
+      "url": "https://www.ecoherencia.es/",
+      "location": "Jerez de la Frontera"
+    },
+    {
       "name": "Desarrollo Circular Consultoria Ambiental",
       "position": "Formador ambiental",
       "startDate": "2023-02-01",
@@ -81,6 +89,12 @@
     }
   ],
   "education": [
+    {
+      "institution": "Secretaría de Estado de Turismo",
+      "studyType": "Curso SICTED nuevos agentes",
+      "startDate": "2023-04-01",
+      "endDate": "2023-05-01"
+    },
     {
       "institution": "Universidad de Córdoba",
       "studyType": "Grado en Ciencias Ambientales",
