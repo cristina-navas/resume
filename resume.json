@@ -96,10 +96,10 @@
       "endDate": "2023-05-01"
     },
     {
-      "institution": "Universidad de Córdoba",
-      "studyType": "Grado en Ciencias Ambientales",
-      "startDate": "2012-12-31",
-      "endDate": "2017-12-31"
+      "institution": "COAMBA",
+      "studyType": "Curso de Peritaje Ambiental",
+      "startDate": "2020-12-31",
+      "endDate": "2021-12-31"
     },
     {
       "institution": "Universidad de Huelva",
@@ -108,10 +108,10 @@
       "endDate": "2020-12-31"
     },
     {
-      "institution": "COAMBA",
-      "studyType": "Curso de Peritaje Ambiental",
-      "startDate": "2020-12-31",
-      "endDate": "2021-12-31"
+      "institution": "Universidad de Córdoba",
+      "studyType": "Grado en Ciencias Ambientales",
+      "startDate": "2012-12-31",
+      "endDate": "2017-12-31"
     },
     {
       "institution": "Junta de Andalucía",
@@ -128,11 +128,11 @@
   "languages": [
     {
       "language": "Espanol",
-      "fluency": "Nativa"
+      "fluency": "Native speaker"
     },
     {
       "language": "Ingles",
-      "fluency": "High"
+      "fluency": "Fluent"
     }
   ],
   "meta": {
