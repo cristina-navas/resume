@@ -21,7 +21,7 @@
   "work": [
     {
       "name": "Ecoherencia S. Coop. And.",
-      "position": "Educador ambiental en Ecoherencia S. Coop. And.",
+      "position": "Educador ambiental",
       "startDate": "2023-06-01",
       "summary": "Projecto charla-taller de educación ambiental sobre energías renovables en el Centro Energía Viva Andalucía (CEVA) ",
       "url": "https://www.ecoherencia.es/",
@@ -29,7 +29,7 @@
     },
     {
       "name": "Desarrollo Circular Consultoria Ambiental",
-      "position": "Formador ambiental en Desarrollo Circular Consultoria Ambiental",
+      "position": "Formador ambiental",
       "startDate": "2023-02-01",
       "endDate": "2023-03-03",
       "summary": "Preparación, puesta en marcha e impartición de projecto charla-taller de educación ambiental por los centros de educación primaria de la ciudad de Huelva",
@@ -38,7 +38,7 @@
     },
     {
       "name": "EKOTONIA CONSULTORES",
-      "position": "Técnico medioambiental en EKOTONIA CONSULTORES",
+      "position": "Técnico medioambiental",
       "startDate": "2022-07-31",
       "endDate": "2023-02-26",
       "summary": "Realización de proyectos y programas de educación ambiental.\nAtención al cliente personalizada:\nAuditoría ambiental, redacción de proyectos.\nCertificaciones ambientales.\nGestión de redes sociales.\nRedacción de Manuales de Buenas Prácticas y diversa cartelería",
@@ -136,7 +136,6 @@
     }
   ],
   "meta": {
-    "theme": "flat",
     "version": "v1.0.0",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
   }
