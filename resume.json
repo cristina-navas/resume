@@ -29,7 +29,8 @@
     {
       "name": "Doñana Tour",
       "position": "Educador ambiental",
-      "startDate": "2024-04-10",
+      "startDate": "2024-04-08",
+      "endDate": "2024-04-22",
       "summary": "Educación ambiental en el corazón del Parque Nacional de Doñana",
       "url": "https://donana.com/",
       "location": "Doñana/ El Rocío (Huelva)"
@@ -38,6 +39,7 @@
       "name": "Atlantida Medio Ambiente",
       "position": "Educador ambiental",
       "startDate": "2023-11-10",
+      "endDate": "2024-02-08",
       "summary": "Projecto taller de educación ambiental y concienciación sobre el medio natural y valores ambientales del Parque Metropolitano Pinar de la Algaida y Marisma de los Toruños. ",
       "url": "https://www.atlantidama.com/",
       "location": "Pinar de la Algaida (Puerto Real, Cádiz)"
@@ -46,14 +48,16 @@
       "name": "Ecoherencia S. Coop. And.",
       "position": "Educador ambiental",
       "startDate": "2023-06-01",
+      "endDate": "2024-01-09",
       "summary": "Projecto charla-taller de educación ambiental sobre energías renovables en el Centro Energía Viva Andalucía (CEVA) ",
       "url": "https://www.ecoherencia.es/",
       "location": "Jerez de la Frontera"
     },
     {
       "name": "Brutal",
-      "position": "TConsultor externo",
+      "position": "Consultor externo",
       "startDate": "2023-04-01",
+      "endDate": "2023-05-01",
       "summary": "Censo y seguimiento de proyecto de Quiropteros ",
       "location": "Coria del Río"
     },
@@ -86,8 +90,9 @@
     {
       "name": "BRUTAL",
       "position": "Monitora ambiental en Brutal",
-      "startDate": "2020-02-28",
-      "summary": "Actividades eventuales de educación ambiental para toda la familia.\nSafaris y rutas por y para todos los públicos.\nCreación de actividades adaptadas a cada nivel, siempre buscando la mayor sostenibilidad en cada una de ellas.\nDesarrollo de planes y guías didácticas de actividades para centros educativos",
+      "startDate": "2020-02-16",
+      "endDate": "2020-03-20",
+      "summary": "Actividades eventuales de educación ambiental para toda la familia.\nSafaris y rutas por y para todos los públicos. Desarrollo de actividades y guías didácticas para centros educativos",
       "url": "https://www.linkedin.com/company/42803428",
       "location": "Andalucía"
     },
