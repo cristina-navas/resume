@@ -2,11 +2,20 @@
   "scripts": {
     "render-html": "npx resumed render --theme jsonresume-theme-stackoverflow --output docs/index.html",
     "render-pdf": "npx resume export --resume resume.json --theme jsonresume-theme-stackoverflow resume.pdf",
-    "validate": "npx resumed validate resume.json"
+    "validate": "npx resumed validate resume.json",
+    "prepare": "husky"
   },
   "dependencies": {
-    "resumed": "^3.0.1",
+    "jsonresume-theme-stackoverflow": "^2.0.2",
     "resume-cli": "3.0.8",
-    "jsonresume-theme-stackoverflow": "^2.0.2"
+    "resumed": "^3.0.1"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.4",
+    "prettier": "3.6.2"
+  },
+  "lint-staged": {
+    "**/*": "prettier resume.json --write --ignore-unknown"
   }
 }
