@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>Cristina Navas Jiménez</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-  <style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <style>
   /********************************************
 * 	reset from
 * 	http://meyerweb.com/eric/tools/css/reset/
@@ -190,10 +189,6 @@ em {
   color: #757575;
 }
 
-blockquote {
-  margin-bottom: 1em;
-}
-
 strong {
   font-weight: 700;
 }
@@ -266,10 +261,13 @@ section .location {
   border-radius: 4px;
 }
 
+.section.summary header {
+  margin-top: 1rem;
+}
+
 .main-summary {
   background: #f1f8ff;
   padding: 1.2em 1em;
-  margin-top: 1rem;
 }
 
 .main-summary p {
@@ -569,6 +567,7 @@ section .location {
 
 #references .item {
   padding-left: 0.5em;
+  margin-bottom: 1em;
   border-left: 5px solid #ff6d1f;
 }
 
@@ -652,6 +651,12 @@ section .location {
   #profiles a:not(.hide-href-print)::after{
     content: " (" attr(href) ") ";
   }
+  #profiles .url .show-only-url-print {
+    display: none;
+  }
+  #profiles .url a::after {
+    content: attr(href);
+  }
   #resume {
     margin: 0.1em;
     padding: 0.1em;
@@ -664,6 +669,9 @@ section .location {
   }
   .item-count {
     display: none;
+  }
+  .company a {
+    color: #40484f;
   }
   .company::before,
   .institution::before,
@@ -686,7 +694,8 @@ section .location {
     padding-bottom: 0.15rem;
   }
   .section > section > section {
-    margin: 0 0 1em 0;
+    border-bottom: 1px solid #fdfdfd;
+    margin: .5em 0;
   }
   .section > section > section:last-of-type {
     margin: 0;
@@ -714,7 +723,7 @@ section .location {
   ul.keywords li::after,
   ul.courses li::after {
     padding: 0 0 0 0.1rem;
-    content: " |";
+    content: ", ";
   }
   ul.keywords::before,
   ul.courses::before {
@@ -722,14 +731,28 @@ section .location {
     font-weight: 600;
   }
   #skills .item {
-    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem 0;
     padding: 0;
+  }
+  #skills .level {
+    margin: 0.1rem 0;
+    font-weight: 400;
+  }
+  #skills .keywords {
+    font-size: 0.9rem;
+    margin: 0;
   }
   .highlights {
     margin: 0.5em 0 0 0;
   }
+  .highlights > li > p {
+    margin-bottom: 0.3em;
+  }
   ul.keywords::before {
-    content: "Skills acquired: ";
+    content: "Skills: ";
+    font-size: 1rem;
   }
   #skills .keywords::before {
     content: none;
@@ -740,6 +763,12 @@ section .location {
   }
   ul.courses::before {
     content: "Major courses: ";
+    font-size: 1rem;
+  }
+  ul.keywords li,
+  ul.courses li {
+    font-size: 1rem;
+    line-height: inherit;
   }
   ul.keywords li:last-of-type::after,
   ul.courses li:last-of-type::after {
@@ -759,7 +788,7 @@ section .location {
     display: block;
     opacity: 1 !important;
   }
-  .fa-map-marker-alt:before {
+  .fa-location-dot:before {
     padding-left: 0.1em;
   }
 }
@@ -778,13 +807,13 @@ section .location {
     
     		<span class="location">
     			<span class="address">Jerez de la Frontera (Cádiz) España,</span>
-    			<span class="countryCode">ES</span>
+    			<span class="countryCode">(ES)</span>
     		</span>
     
     
     		<div id="contact">
     			<div class="email">
-    				<span class="far fa-envelope"></span>
+    				<span class="fa-regular fa-envelope"></span>
     				<a class="hide-href-print" href="mailto:cristina.navas869@gmail.com">cristina.navas869@gmail.com</a>
     			</div>
     		</div>
@@ -792,16 +821,19 @@ section .location {
     		<div id="profiles">
     			<div class="item">
     				<div class="username">
-    					<span class="fab fa-linkedin linkedin social"></span>
+    					<span class="fa-brands fa-linkedin linkedin social"></span>
     					<span class="url">
-    						<a target="_blank" href="https://www.linkedin.com/in/cristina-navas/">cristina-navas</a>
+    						<a target="_blank" href="https://www.linkedin.com/in/cristina-navas/"><span class="show-only-url-print">cristina-navas</span></a>
     					</span>
     				</div>
     			</div>
     		</div>
     	</header>
     
-    	<section class="section">
+    	<section class="section summary">
+        <header>
+          <h2 class="section-title">summary</h2>
+        </header>
     		<section class="main-summary">
     			<div><p><p>Actualmente me encuentro en una etapa en la que estoy dispuesta a enfrentarme a los retos que se me interpongan.</p><p>Autodidacta y con capacidad de ejecución, soy una profesional seria, cuya meta, es seguir cultivando y potenciando mis habilidades profesionales y la consecución de unos objetivos ambiciosos, siempre buscando el beneficio y mejora ambiental como resultado.</p><p>Mis habilidades comunicativas y sociales me convierten en un activo con el que es fácil trabajar y comunicarse</p></p></div>
     		</section>
@@ -814,233 +846,244 @@ section .location {
     
       <section id="work">
         <section class="work-item">
+            <label for="work-item-0"></label>
     
-          <label for="work-item-0"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">May 2025</span>
+                <span class="endDate">- Current</span>
+              </div>
+              <div class="position">Educador ambiental</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">May 2025</span>
-              <span class="endDate">- Current</span>
-            </div>
-            <div class="position">Educador ambiental</div>
-            <div class="company">Ecoherencia, S. Coop. And.</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Centro de Conservación de la Biodiversidad - Zoobotánico de Jerez Alberto Duran</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Centro de Conservación de la Biodiversidad - Zoobotánico de Jerez Alberto Duran
+          </span>
           <span class="url">
-            <span class="fas fa-external-link-alt"></span>
+            <span class="fa-solid fa-up-right-from-square"></span>
             <a target="_blank" href="https://www.ecoherencia.es/">https://www.ecoherencia.es/</a>
           </span>        <div class="item" id="work-item">
             <div class="summary"><p><p>Proyecto educativo de Granja de Animales Domésticos Razas Autóctonas Andaluzas (GADA).</p></p></div>
           </div>
         </section>
         <section class="work-item">
+            <label for="work-item-1"></label>
     
-          <label for="work-item-1"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Oct 2024</span>
+                <span class="endDate">- Current</span>
+              </div>
+              <div class="position">Tecnico ambiental</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Oct 2024</span>
-              <span class="endDate">- Current</span>
-            </div>
-            <div class="position">Tecnico ambiental</div>
-            <div class="company">Brutal</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Andalucía</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Andalucía
+          </span>
            <div class="item" id="work-item">
             <div class="summary"><p><p>Analisis de datos, gestión de proyectos, educación ambiental, proyectos de conservación.</p></p></div>
           </div>
         </section>
         <section class="work-item">
+            <label for="work-item-2"></label>
     
-          <label for="work-item-2"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Apr 2024</span>
+                <span class="endDate">- Apr 2024</span>
+              </div>
+              <div class="position">Educador ambiental</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Apr 2024</span>
-              <span class="endDate">- Apr 2024</span>
-            </div>
-            <div class="position">Educador ambiental</div>
-            <div class="company">Doñana Tour</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Doñana/ El Rocío (Huelva)</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Doñana/ El Rocío (Huelva)
+          </span>
           <span class="url">
-            <span class="fas fa-external-link-alt"></span>
+            <span class="fa-solid fa-up-right-from-square"></span>
             <a target="_blank" href="https://donana.com/">https://donana.com/</a>
           </span>        <div class="item" id="work-item">
             <div class="summary"><p><p>Educación ambiental en el corazón del Parque Nacional de Doñana</p></p></div>
           </div>
         </section>
         <section class="work-item">
+            <label for="work-item-3"></label>
     
-          <label for="work-item-3"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Nov 2023</span>
+                <span class="endDate">- Feb 2024</span>
+              </div>
+              <div class="position">Educador ambiental</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Nov 2023</span>
-              <span class="endDate">- Feb 2024</span>
-            </div>
-            <div class="position">Educador ambiental</div>
-            <div class="company">Atlantida Medio Ambiente</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Pinar de la Algaida (Puerto Real, Cádiz)</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Pinar de la Algaida (Puerto Real, Cádiz)
+          </span>
           <span class="url">
-            <span class="fas fa-external-link-alt"></span>
+            <span class="fa-solid fa-up-right-from-square"></span>
             <a target="_blank" href="https://www.atlantidama.com/">https://www.atlantidama.com/</a>
           </span>        <div class="item" id="work-item">
             <div class="summary"><p><p>Projecto taller de educación ambiental y concienciación sobre el medio natural y valores ambientales del Parque Metropolitano Pinar de la Algaida y Marisma de los Toruños.</p></p></div>
           </div>
         </section>
         <section class="work-item">
+            <label for="work-item-4"></label>
     
-          <label for="work-item-4"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Jun 2023</span>
+                <span class="endDate">- Jan 2024</span>
+              </div>
+              <div class="position">Educador ambiental</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Jun 2023</span>
-              <span class="endDate">- Jan 2024</span>
-            </div>
-            <div class="position">Educador ambiental</div>
-            <div class="company">Ecoherencia S. Coop. And.</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Jerez de la Frontera</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Jerez de la Frontera
+          </span>
           <span class="url">
-            <span class="fas fa-external-link-alt"></span>
+            <span class="fa-solid fa-up-right-from-square"></span>
             <a target="_blank" href="https://www.ecoherencia.es/">https://www.ecoherencia.es/</a>
           </span>        <div class="item" id="work-item">
             <div class="summary"><p><p>Projecto charla-taller de educación ambiental sobre energías renovables en el Centro Energía Viva Andalucía (CEVA)</p></p></div>
           </div>
         </section>
         <section class="work-item">
+            <label for="work-item-5"></label>
     
-          <label for="work-item-5"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Apr 2023</span>
+                <span class="endDate">- May 2023</span>
+              </div>
+              <div class="position">Consultor externo</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Apr 2023</span>
-              <span class="endDate">- May 2023</span>
-            </div>
-            <div class="position">Consultor externo</div>
-            <div class="company">Brutal</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Coria del Río</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Coria del Río
+          </span>
            <div class="item" id="work-item">
             <div class="summary"><p><p>Censo y seguimiento de proyecto de Quiropteros</p></p></div>
           </div>
         </section>
         <section class="work-item">
+            <label for="work-item-6"></label>
     
-          <label for="work-item-6"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Feb 2023</span>
+                <span class="endDate">- Mar 2023</span>
+              </div>
+              <div class="position">Formador ambiental</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Feb 2023</span>
-              <span class="endDate">- Mar 2023</span>
-            </div>
-            <div class="position">Formador ambiental</div>
-            <div class="company">Desarrollo Circular Consultoria Ambiental</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Huelva</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Huelva
+          </span>
           <span class="url">
-            <span class="fas fa-external-link-alt"></span>
+            <span class="fa-solid fa-up-right-from-square"></span>
             <a target="_blank" href="https://desarrollocircular.es">https://desarrollocircular.es</a>
           </span>        <div class="item" id="work-item">
             <div class="summary"><p><p>Preparación, puesta en marcha e impartición de projecto charla-taller de educación ambiental por los centros de educación primaria de la ciudad de Huelva</p></p></div>
           </div>
         </section>
         <section class="work-item">
+            <label for="work-item-7"></label>
     
-          <label for="work-item-7"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Jul 2022</span>
+                <span class="endDate">- Feb 2023</span>
+              </div>
+              <div class="position">Técnico medioambiental</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Jul 2022</span>
-              <span class="endDate">- Feb 2023</span>
-            </div>
-            <div class="position">Técnico medioambiental</div>
-            <div class="company">EKOTONIA CONSULTORES</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Huelva</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Huelva
+          </span>
           <span class="url">
-            <span class="fas fa-external-link-alt"></span>
+            <span class="fa-solid fa-up-right-from-square"></span>
             <a target="_blank" href="https://www.linkedin.com/company/1885266">https://www.linkedin.com/company/1885266</a>
           </span>        <div class="item" id="work-item">
             <div class="summary"><p><p>Realización de proyectos y programas de educación ambiental.</p><p>Atención al cliente personalizada:</p><p>Auditoría ambiental, redacción de proyectos.</p><p>Certificaciones ambientales.</p><p>Gestión de redes sociales.</p><p>Redacción de Manuales de Buenas Prácticas y diversa cartelería</p></p></div>
           </div>
         </section>
         <section class="work-item">
+            <label for="work-item-8"></label>
     
-          <label for="work-item-8"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Apr 2022</span>
+                <span class="endDate">- Jul 2022</span>
+              </div>
+              <div class="position">Educadora en Centro Delta Ayamonte</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Apr 2022</span>
-              <span class="endDate">- Jul 2022</span>
-            </div>
-            <div class="position">Educadora en Centro Delta Ayamonte</div>
-            <div class="company">Centro Delta Ayamonte</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Ayamonte, Huelva</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Ayamonte, Huelva
+          </span>
            <div class="item" id="work-item">
             <div class="summary"><p><p>Clases con alumnos de todos los niveles, desde primaria hasta bachillerato, en materia de matemáticas, biología, física y química (principalmente). Asesoramiento, apoyo, técnicas de estudio, preparación de exámenes y prueba de acceso a la universidad</p></p></div>
           </div>
         </section>
         <section class="work-item">
+            <label for="work-item-9"></label>
     
-          <label for="work-item-9"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Feb 2020</span>
+                <span class="endDate">- Mar 2020</span>
+              </div>
+              <div class="position">Monitora ambiental en Brutal</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Feb 2020</span>
-              <span class="endDate">- Mar 2020</span>
-            </div>
-            <div class="position">Monitora ambiental en Brutal</div>
-            <div class="company">BRUTAL</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Andalucía</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Andalucía
+          </span>
           <span class="url">
-            <span class="fas fa-external-link-alt"></span>
+            <span class="fa-solid fa-up-right-from-square"></span>
             <a target="_blank" href="https://www.linkedin.com/company/42803428">https://www.linkedin.com/company/42803428</a>
           </span>        <div class="item" id="work-item">
             <div class="summary"><p><p>Actividades eventuales de educación ambiental para toda la familia.</p><p>Safaris y rutas por y para todos los públicos. Desarrollo de actividades y guías didácticas para centros educativos</p></p></div>
           </div>
         </section>
         <section class="work-item">
+            <label for="work-item-10"></label>
     
-          <label for="work-item-10"></label>
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Sep 2013</span>
+                <span class="endDate">- Sep 2017</span>
+              </div>
+              <div class="position">Alumno colaborador Dpt. Química Orgánica en Universidad de Córdoba</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Sep 2013</span>
-              <span class="endDate">- Sep 2017</span>
-            </div>
-            <div class="position">Alumno colaborador Dpt. Química Orgánica en Universidad de Córdoba</div>
-            <div class="company">Universidad de Córdoba</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Córdoba, Andalucía, España</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Córdoba, Andalucía, España
+          </span>
           <span class="url">
-            <span class="fas fa-external-link-alt"></span>
+            <span class="fa-solid fa-up-right-from-square"></span>
             <a target="_blank" href="https://www.linkedin.com/company/78187">https://www.linkedin.com/company/78187</a>
           </span>        <div class="item" id="work-item">
             <div class="summary"><p><p>Como alumna colaborador del Departamento de Química Orgánica he podido aprender a usar todo tipo de equipo y técnicas, he tenido la suerte de colaborar en proyectos, trabajos e investigaciones de diversa índole y así como con una gran variedad de profesionales del sector</p></p></div>
@@ -1048,18 +1091,19 @@ section .location {
         </section>
         <section class="work-item">
     
+            <header class="clear">
+              <div class="date">
+                <span class="startDate">Jun 2016</span>
+                <span class="endDate">- Sep 2016</span>
+              </div>
+              <div class="position">Cajera en Supermercados El Jamon</div>
+                <div class="company"></div>
+            </header>
     
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">Jun 2016</span>
-              <span class="endDate">- Sep 2016</span>
-            </div>
-            <div class="position">Cajera en Supermercados El Jamon</div>
-            <div class="company">Supermercados El Jamon</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Ayamonte, Huelva</span>
+          <span class="location">
+            <span class="fa-solid fa-location-dot"></span>
+            Ayamonte, Huelva
+          </span>
            <div class="item" id="work-item">
           </div>
         </section>
