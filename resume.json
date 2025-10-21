@@ -23,6 +23,7 @@
       "name": "Ecoherencia, S. Coop. And.",
       "position": "Educador ambiental",
       "startDate": "2025-05-13",
+      "endDate": "2025-08-08"
       "summary": "Proyecto educativo de Granja de Animales Domésticos Razas Autóctonas Andaluzas (GADA). ",
       "url": "https://www.ecoherencia.es/",
       "location": "Centro de Conservación de la Biodiversidad - Zoobotánico de Jerez Alberto Duran"
@@ -129,7 +130,22 @@
       "organization": "Club de Ciencias Ayamonte",
       "position": "Monitora y Co-organizadora",
       "summary": "Co-organizadora y monitora del Club Ciencias Ayamonte"
-    }
+    },
+    {
+      "organization": "Sociedad Gaditana de Historia Natural - Grupo Quirópteros",
+      "position": "Coordinadora y voluntaria",
+      "summary": "Coordinadora y voluntaria del Grupo de Quirópteros"
+    },
+    {
+      "organization": "Sociedad Gaditana de Historia Natural - Proyercto de Cría Especies Amenazadas",
+      "position": "Voluntaria",
+      "summary": "Voluntaria en Proyecto de Cria de Especies Ibéricas Amenazadas, entre ellas destacan aguilucho cenizo, cernícalo primilla, cerceta pardilla, chotacabras, lechuza común... y del Proyecto Vencejos realizado en parte en el mismo espacio y de manera simultanea al proyecto de cría"
+    },
+    {
+      "organization": "Sociedad Gaditana de Historia Natural - Proyecto Nóctulo Grande",
+      "position": "Voluntariado",
+      "summary": " Voluntariado y seguimiento del Noctulo Grande"
+    },
   ],
   "education": [
     {
