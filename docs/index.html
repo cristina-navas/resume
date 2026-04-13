@@ -1,11 +1,13 @@
 <!doctype html>
-<html>
+<html lang="en-gb">
   <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Cristina Navas Jiménez</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <style>
-  /********************************************
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Cristina Navas Jiménez</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./override.css">
+    <style>
+      /********************************************
 * 	reset from
 * 	http://meyerweb.com/eric/tools/css/reset/
 *******************************************/
@@ -139,14 +141,101 @@ table {
 }
 
 /****************
+*	CSS VARIABLES
+****************/
+
+:root {
+  --color-text: #40484f;
+  --color-text-secondary: #606d76;
+  --color-text-muted: #757575;
+  --color-heading: #202931;
+  --color-accent: #ff6d1f;
+  --color-link: #0095ff;
+  --color-link-hover: #0c65a5;
+  --color-background: var(--color-section-title-bg);
+  --color-background-alt: #f1f8ff;
+  --color-border: #ccc;
+  --color-border-light: #ddd;
+  --color-keyword-text: #2c5777;
+  --color-keyword-bg: #dfeaf1;
+  --color-keyword-border: #dfeaf1;
+  --color-reference-border: #ff6d1f;
+  --color-bar-beginner: #eb5f51;
+  --color-bar-intermediate: #ffdf1f;
+  --color-bar-advanced: #5cb85c;
+  --color-bar-master: #59c596;
+  --color-section-title-bg: #fff;
+  --font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #d4d4d8;
+    --color-text-secondary: #a1a1aa;
+    --color-text-muted: #9ca3af;
+    --color-heading: #e4e4e7;
+    --color-accent: #fb923c;
+    --color-link: #60a5fa;
+    --color-link-hover: #93c5fd;
+    --color-background: #18181b;
+    --color-background-alt: #27272a;
+    --color-border: #3f3f46;
+    --color-border-light: #3f3f46;
+    --color-keyword-text: #93c5fd;
+    --color-keyword-bg: #1e3a5f;
+    --color-keyword-border: #1e3a5f;
+    --color-reference-border: #fb923c;
+    --color-bar-beginner: #ef4444;
+    --color-bar-intermediate: #eab308;
+    --color-bar-advanced: #22c55e;
+    --color-bar-master: #34d399;
+    --color-section-title-bg: #18181b;
+    --font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  }
+}
+
+/****************
+*	ACCESSIBILITY
+****************/
+
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 999;
+  padding: 0.5em 1em;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  left: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/****************
 *	COMMONS
 ****************/
 
 body,
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: var(--font-family);
   font-size: 13px;
-  color: #40484f;
+  color: var(--color-text);
+  background-color: var(--color-background);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.46153846;
@@ -158,13 +247,19 @@ p {
 }
 
 a {
-  color: #0095ff;
+  color: var(--color-link);
   text-decoration: none;
 }
 
 a:hover {
-  color: #0c65a5;
+  color: var(--color-link-hover);
   text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 li {
@@ -186,7 +281,7 @@ h3 {
 }
 
 em {
-  color: #757575;
+  color: var(--color-text-muted);
 }
 
 strong {
@@ -207,7 +302,7 @@ strong {
 
 section .location {
   margin-right: 0.5em;
-  color: #606d76;
+  color: var(--color-text-secondary);
   font-weight: 700;
 }
 
@@ -217,6 +312,11 @@ section .location {
 
 #profiles .item {
   padding: 0;
+  margin-right: 0.8em;
+}
+
+#header {
+  margin-bottom: 1rem;
 }
 
 #header > #profiles,
@@ -250,7 +350,7 @@ section .location {
 }
 
 #header h2.label {
-  color: #202931;
+  color: var(--color-heading);
   font-size: 1.47rem;
   font-weight: 300;
 }
@@ -266,7 +366,7 @@ section .location {
 }
 
 .main-summary {
-  background: #f1f8ff;
+  background: var(--color-background-alt);
   padding: 1.2em 1em;
 }
 
@@ -276,9 +376,9 @@ section .location {
 
 .section-title {
   display: inline-block;
-  background: #fff;
+  background: var(--color-section-title-bg);
   padding: 0 1em 0.3em 0;
-  color: #ff6d1f;
+  color: var(--color-accent);
   text-transform: uppercase;
   font-weight: 600;
   border: none;
@@ -298,7 +398,7 @@ section .location {
   left: 0;
   top: 0.7em;
   height: 1px;
-  background: #ccc;
+  background: var(--color-border);
   content: "";
   width: 100%;
   z-index: -100;
@@ -360,7 +460,7 @@ section .location {
 .institution,
 .organization,
 .awarder {
-  color: #606d76;
+  color: var(--color-text-secondary);
   font-weight: 400;
 }
 
@@ -368,7 +468,7 @@ section .location {
   display: block;
   font-size: 1rem;
   padding: 0.1em 0;
-  color: #606d76;
+  color: var(--color-text-secondary);
   font-weight: 400;
 }
 
@@ -384,19 +484,15 @@ section .location {
   padding: 4px 5px 5px;
   font-size: 0.9rem;
   line-height: 1;
-  color: #3e6d8e;
-  background-color: #dfeaf1;
-  border: 0 solid #dfeaf1;
+  color: var(--color-keyword-text);
+  background-color: var(--color-keyword-bg);
+  border: 0 solid var(--color-keyword-border);
   white-space: nowrap;
 }
 
 .keywords li:hover,
 .courses li:hover {
-  background: #dfeaf0;
-}
-
-.highlights {
-  margin: 1em 0 0 0;
+  background: var(--color-keyword-bg);
 }
 
 .highlights > li > p {
@@ -527,7 +623,7 @@ section .location {
 }
 
 .level .bar {
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border-light);
   display: block;
   width: 10em;
   height: 5px;
@@ -544,31 +640,32 @@ section .location {
 }
 
 .level.beginner .bar::after {
-  background: #eb5f51;
+  background: var(--color-bar-beginner);
   width: 2.5em;
 }
 
 .level.intermediate .bar::after {
-  background: #ffdf1f;
+  background: var(--color-bar-intermediate);
   width: 5em;
 }
 
 .level.advanced .bar::after,
 .level.fluent .bar::after {
-  background: #5cb85c;
+  background: var(--color-bar-advanced);
   width: 7.5em;
 }
 
 .level.master .bar::after,
+.level.expert .bar::after,
 .level.native.speaker .bar::after {
-  background: #59c596;
+  background: var(--color-bar-master);
   width: 10em;
 }
 
 #references .item {
   padding-left: 0.5em;
   margin-bottom: 1em;
-  border-left: 5px solid #ff6d1f;
+  border-left: 5px solid var(--color-reference-border);
 }
 
 .section > section > section {
@@ -588,6 +685,83 @@ section .location {
 .display {
   display: block;
   opacity: 1 !important;
+}
+
+/****************
+*		MOBILE
+****************/
+
+@media screen and (max-width: 601px) {
+  #resume {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  #skills,
+  #languages,
+  #interests {
+    flex-direction: column;
+  }
+
+  #skills .item,
+  #languages .item,
+  #interests .item {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  #skills .item .keywords {
+    width: 100%;
+  }
+
+  #header > #profiles,
+  #header > #contact {
+    flex-wrap: wrap;
+  }
+
+  #header > div > div {
+    margin-right: 0.8em;
+    margin-bottom: 0.3em;
+  }
+
+  #header h1.name {
+    font-size: 2rem;
+  }
+
+  #header h2.label {
+    font-size: 1.2rem;
+  }
+
+  #header .image {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+    width: 8em;
+  }
+
+  .section header .date {
+    display: block;
+    float: none;
+    font-size: 0.9rem;
+    margin-top: 0.2em;
+  }
+
+  .section > section > header {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 601px) {
+  #skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #skills .item {
+    width: 48%;
+    padding-right: 2%;
+  }
 }
 
 /****************
@@ -793,594 +967,16 @@ section .location {
   }
 }
 
-  </style>
-  
+    </style>
   </head>
   <body>
-  
-  <div id="resume">
-    	<header id="header" class="clear">
-    		<div>
-    			<h1 class="name">Cristina Navas Jiménez</h1>
-    			<h2 class="label">Técnico en Educación Ambiental</h2>
-    		</div>
-    
-    		<span class="location">
-    			<span class="address">Jerez de la Frontera (Cádiz) España,</span>
-    			<span class="countryCode">(ES)</span>
-    		</span>
-    
-    
-    		<div id="contact">
-    			<div class="email">
-    				<span class="fa-regular fa-envelope"></span>
-    				<a class="hide-href-print" href="mailto:cristina.navas869@gmail.com">cristina.navas869@gmail.com</a>
-    			</div>
-    		</div>
-    
-    		<div id="profiles">
-    			<div class="item">
-    				<div class="username">
-    					<span class="fa-brands fa-linkedin linkedin social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://www.linkedin.com/in/cristina-navas/"><span class="show-only-url-print">cristina-navas</span></a>
-    					</span>
-    				</div>
-    			</div>
-    		</div>
-    	</header>
-    
-    	<section class="section summary">
-        <header>
-          <h2 class="section-title">summary</h2>
-        </header>
-    		<section class="main-summary">
-    			<div><p><p>Soy una profesional en constante evolución, motivada por asumir nuevos retos y adaptarme a entornos dinámicos. A lo largo de mi trayectoria, he ampliado y consolidado mis habilidades mediante el aprendizaje continuo y la experiencia práctica, lo que me permite abordar proyectos con autonomía, compromiso y enfoque en resultados.</p><p>Me caracterizo por mi capacidad de ejecución, pensamiento crítico y orientación a objetivos ambiciosos, siempre integrando criterios de sostenibilidad y mejora ambiental en mi trabajo. Además, cuento con sólidas habilidades comunicativas y sociales, que facilitan el trabajo en equipo, la colaboración efectiva y la creación de entornos laborales positivos.</p></p></div>
-    		</section>
-    	</section>
-    
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Work Experience <span class="item-count">(12)</span></h2>
-      </header>
-    
-      <section id="work">
-        <section class="work-item">
-            <label for="work-item-0"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">May 2025</span>
-                <span class="endDate">- Aug 2025</span>
-              </div>
-              <div class="position">Educador ambiental</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Centro de Conservación de la Biodiversidad - Zoobotánico de Jerez Alberto Duran
-          </span>
-          <span class="url">
-            <span class="fa-solid fa-up-right-from-square"></span>
-            <a target="_blank" href="https://www.ecoherencia.es/">https://www.ecoherencia.es/</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Proyecto educativo de Granja de Animales Domésticos Razas Autóctonas Andaluzas (GADA).</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-            <label for="work-item-1"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Oct 2024</span>
-                <span class="endDate">- Current</span>
-              </div>
-              <div class="position">Tecnico y educadora ambiental</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Andalucía
-          </span>
-          <span class="url">
-            <span class="fa-solid fa-up-right-from-square"></span>
-            <a target="_blank" href="https://www.linkedin.com/in/brutal-espa%C3%B1a/">https://www.linkedin.com/in/brutal-espa%C3%B1a/</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Analisis de datos, gestión de proyectos, educación ambiental, proyectos de conservación.</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-            <label for="work-item-2"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Apr 2024</span>
-                <span class="endDate">- Apr 2024</span>
-              </div>
-              <div class="position">Educador ambiental</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Doñana/ El Rocío (Huelva)
-          </span>
-          <span class="url">
-            <span class="fa-solid fa-up-right-from-square"></span>
-            <a target="_blank" href="https://donana.com/">https://donana.com/</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Educación ambiental en el corazón del Parque Nacional de Doñana</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-            <label for="work-item-3"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Nov 2023</span>
-                <span class="endDate">- Feb 2024</span>
-              </div>
-              <div class="position">Educador ambiental</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Pinar de la Algaida (Puerto Real, Cádiz)
-          </span>
-          <span class="url">
-            <span class="fa-solid fa-up-right-from-square"></span>
-            <a target="_blank" href="https://www.atlantidama.com/">https://www.atlantidama.com/</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Projecto taller de educación ambiental y concienciación sobre el medio natural y valores ambientales del Parque Metropolitano Pinar de la Algaida y Marisma de los Toruños.</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-            <label for="work-item-4"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Jun 2023</span>
-                <span class="endDate">- Jan 2024</span>
-              </div>
-              <div class="position">Educador ambiental</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Jerez de la Frontera
-          </span>
-          <span class="url">
-            <span class="fa-solid fa-up-right-from-square"></span>
-            <a target="_blank" href="https://www.ecoherencia.es/">https://www.ecoherencia.es/</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Projecto charla-taller de educación ambiental sobre energías renovables en el Centro Energía Viva Andalucía (CEVA)</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-            <label for="work-item-5"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Apr 2023</span>
-                <span class="endDate">- May 2023</span>
-              </div>
-              <div class="position">Consultor externo</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Coria del Río
-          </span>
-           <div class="item" id="work-item">
-            <div class="summary"><p><p>Censo y seguimiento de proyecto de Quiropteros</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-            <label for="work-item-6"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Feb 2023</span>
-                <span class="endDate">- Mar 2023</span>
-              </div>
-              <div class="position">Formador ambiental</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Huelva
-          </span>
-          <span class="url">
-            <span class="fa-solid fa-up-right-from-square"></span>
-            <a target="_blank" href="https://desarrollocircular.es">https://desarrollocircular.es</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Preparación, puesta en marcha e impartición de projecto charla-taller de educación ambiental por los centros de educación primaria de la ciudad de Huelva</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-            <label for="work-item-7"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Jul 2022</span>
-                <span class="endDate">- Feb 2023</span>
-              </div>
-              <div class="position">Técnico medioambiental</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Huelva
-          </span>
-          <span class="url">
-            <span class="fa-solid fa-up-right-from-square"></span>
-            <a target="_blank" href="https://www.linkedin.com/company/1885266">https://www.linkedin.com/company/1885266</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Realización de proyectos y programas de educación ambiental.</p><p>Atención al cliente personalizada:</p><p>Auditoría ambiental, redacción de proyectos.</p><p>Certificaciones ambientales.</p><p>Gestión de redes sociales.</p><p>Redacción de Manuales de Buenas Prácticas y diversa cartelería</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-            <label for="work-item-8"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Apr 2022</span>
-                <span class="endDate">- Jul 2022</span>
-              </div>
-              <div class="position">Educadora en Centro Delta Ayamonte</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Ayamonte, Huelva
-          </span>
-           <div class="item" id="work-item">
-            <div class="summary"><p><p>Clases con alumnos de todos los niveles, desde primaria hasta bachillerato, en materia de matemáticas, biología, física y química (principalmente). Asesoramiento, apoyo, técnicas de estudio, preparación de exámenes y prueba de acceso a la universidad</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-            <label for="work-item-9"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Feb 2020</span>
-                <span class="endDate">- Mar 2020</span>
-              </div>
-              <div class="position">Monitora ambiental en Brutal</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Andalucía
-          </span>
-          <span class="url">
-            <span class="fa-solid fa-up-right-from-square"></span>
-            <a target="_blank" href="https://www.linkedin.com/company/42803428">https://www.linkedin.com/company/42803428</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Actividades eventuales de educación ambiental para toda la familia.</p><p>Safaris y rutas por y para todos los públicos. Desarrollo de actividades y guías didácticas para centros educativos</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-            <label for="work-item-10"></label>
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Sep 2013</span>
-                <span class="endDate">- Sep 2017</span>
-              </div>
-              <div class="position">Alumno colaborador Dpt. Química Orgánica en Universidad de Córdoba</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Córdoba, Andalucía, España
-          </span>
-          <span class="url">
-            <span class="fa-solid fa-up-right-from-square"></span>
-            <a target="_blank" href="https://www.linkedin.com/company/78187">https://www.linkedin.com/company/78187</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Como alumna colaborador del Departamento de Química Orgánica he podido aprender a usar todo tipo de equipo y técnicas, he tenido la suerte de colaborar en proyectos, trabajos e investigaciones de diversa índole y así como con una gran variedad de profesionales del sector</p></p></div>
-          </div>
-        </section>
-        <section class="work-item">
-    
-            <header class="clear">
-              <div class="date">
-                <span class="startDate">Jun 2016</span>
-                <span class="endDate">- Sep 2016</span>
-              </div>
-              <div class="position">Cajera en Supermercados El Jamon</div>
-                <div class="company"></div>
-            </header>
-    
-          <span class="location">
-            <span class="fa-solid fa-location-dot"></span>
-            Ayamonte, Huelva
-          </span>
-           <div class="item" id="work-item">
-          </div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Volunteer</h2>
-      </header>
-      <section id="volunteer">
-        <section class="volunteer-item">
-    
-          <label for="volunteer-item-0"></label>
-    
-          <header class="clear">
-             <div class="date">
-              <span class="endDate">
-                - Current
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="position">
-                Monitora y Co-organizadora
-              </div>
-              <div class="organization">
-                Club de Ciencias Ayamonte
-              </div>
-            </div>
-           
-          </header>
-          <div class="item">
-            <div class="summary"><p><p>Co-organizadora y monitora del Club Ciencias Ayamonte</p></p></div>
-          </div>
-        </section>
-        <section class="volunteer-item">
-    
-          <label for="volunteer-item-1"></label>
-    
-          <header class="clear">
-             <div class="date">
-              <span class="endDate">
-                - Current
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="position">
-                Coordinadora y voluntaria
-              </div>
-              <div class="organization">
-                Sociedad Gaditana de Historia Natural - Grupo Quirópteros
-              </div>
-            </div>
-           
-          </header>
-          <div class="item">
-            <div class="summary"><p><p>Coordinadora y voluntaria del Grupo de Quirópteros</p></p></div>
-          </div>
-        </section>
-        <section class="volunteer-item">
-    
-          <label for="volunteer-item-2"></label>
-    
-          <header class="clear">
-             <div class="date">
-              <span class="endDate">
-                - Current
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="position">
-                Voluntaria
-              </div>
-              <div class="organization">
-                Sociedad Gaditana de Historia Natural - Proyercto de Cría Especies Amenazadas
-              </div>
-            </div>
-           
-          </header>
-          <div class="item">
-            <div class="summary"><p><p>Voluntaria en Proyecto de Cria de Especies Ibéricas Amenazadas, entre ellas destacan aguilucho cenizo, cernícalo primilla, cerceta pardilla, chotacabras, lechuza común... y del Proyecto Vencejos realizado en parte en el mismo espacio y de manera simultanea al proyecto de cría</p></p></div>
-          </div>
-        </section>
-        <section class="volunteer-item">
-    
-          <label for="volunteer-item-3"></label>
-    
-          <header class="clear">
-             <div class="date">
-              <span class="endDate">
-                - Current
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="position">
-                Voluntariado
-              </div>
-              <div class="organization">
-                Sociedad Gaditana de Historia Natural - Proyecto Nóctulo Grande
-              </div>
-            </div>
-           
-          </header>
-          <div class="item">
-            <div class="summary"><p><p>Voluntariado y seguimiento del Noctulo Grande</p></p></div>
-          </div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Education <span class="item-count">(5)</span></h2>
-      </header>
-    
-      <section id="education">
-        <section class="education-item">
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">
-              2023
-              </span>
-              <span class="endDate">
-              - 2023
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="studyType">
-                Curso SICTED nuevos agentes
-              </div>
-              <div class="institution">
-                Secretaría de Estado de Turismo
-              </div>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-        <section class="education-item">
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">
-              2020
-              </span>
-              <span class="endDate">
-              - 2021
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="studyType">
-                Curso de Peritaje Ambiental
-              </div>
-              <div class="institution">
-                COAMBA
-              </div>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-        <section class="education-item">
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">
-              2017
-              </span>
-              <span class="endDate">
-              - 2020
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="studyType">
-                Grado en Ciencias Ambientales
-              </div>
-              <div class="institution">
-                Universidad de Huelva
-              </div>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-        <section class="education-item">
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">
-              2012
-              </span>
-              <span class="endDate">
-              - 2017
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="studyType">
-                Grado en Ciencias Ambientales
-              </div>
-              <div class="institution">
-                Universidad de Córdoba
-              </div>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-        <section class="education-item">
-          <header class="clear">
-            <div class="date">
-              <span class="endDate">
-              - Current
-              </span>
-            </div>
-            <div class="header-left">
-              <div class="studyType">
-                Cursos Online
-              </div>
-              <div class="institution">
-                Junta de Andalucía
-              </div>
-            </div>
-          </header>
-    
-    
-          <ul class="courses">
-            <li>Iniciación a Python</li>
-            <li>Dinamizador/a de cursos elearning (Avanzado)</li>
-            <li>Retoque fotográfico con GIMP</li>
-            <li>Iniciación a la programación</li>
-            <li>Iniciación al diseño y a la programación web</li>
-          </ul>
-    
-          <div class="item">
-          </div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Languages</h2>
-      </header>
-      <section id="languages">
-        <div class="display">
-          <h3 class="language">
-            Espanol
-          </h3>
-          <div class="item">
-            <div class="level fluency native speaker">
-              <em>Native speaker</em>
-              <div class="bar"></div>
-            </div>
-          </div>
-        </div>
-        <div class="display">
-          <h3 class="language">
-            Ingles
-          </h3>
-          <div class="item">
-            <div class="level fluency fluent">
-              <em>Fluent</em>
-              <div class="bar"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
-
+    <a class="skip-to-content" href="#resume">Skip to content</a> <main id="resume"><header id="header" class="clear"><!--[!--><div><h1 class="name">Cristina Navas Jiménez</h1> <h2 class="label">Técnico en Educación Ambiental</h2></div> <span class="location"><span class="address">Jerez de la Frontera (Cádiz) España,</span> <!--[!--> <!--[!--> <!--[!--> <span class="countryCode">(ES)</span></span> <!----><!----> <div id="contact"><!--[!--> <div class="email"><span class="fa-regular fa-envelope"></span> <a class="hide-href-print" href="mailto:cristina.navas869@gmail.com">cristina.navas869@gmail.com</a></div> <!--[!--></div> <nav id="profiles" aria-label="Social profiles"><div class="item"><div class="username"><span class="fa-brands fa-linkedin linkedin social"></span> <span class="url"><a target="_blank" href="https://www.linkedin.com/in/cristina-navas/"><span class="show-only-url-print">cristina-navas</span></a></span></div></div></nav></header> <section class="section summary"><header><h2 class="section-title">Summary</h2></header> <section class="main-summary"><div><!----><p>Soy una profesional en constante evolución, motivada por asumir nuevos retos y adaptarme a entornos dinámicos. A lo largo de mi trayectoria, he ampliado y consolidado mis habilidades mediante el aprendizaje continuo y la experiencia práctica, lo que me permite abordar proyectos con autonomía, compromiso y enfoque en resultados.</p>
+<p>Me caracterizo por mi capacidad de ejecución, pensamiento crítico y orientación a objetivos ambiciosos, siempre integrando criterios de sostenibilidad y mejora ambiental en mi trabajo. Además, cuento con sólidas habilidades comunicativas y sociales, que facilitan el trabajo en equipo, la colaboración efectiva y la creación de entornos laborales positivos.</p><!----></div></section></section><!----> <!--[!--><!----> <section class="section"><header><h2 class="section-title">Work Experience <span class="item-count">(12)</span></h2></header> <section id="work"><section class="work-item"><label for="work-item-0"></label> <header class="clear"><div class="date"><span class="startDate">May 2025</span> <span class="endDate">- Aug 2025</span></div><!----> <div class="position">Educador ambiental</div> <span class="company"><a target="_blank" href="https://www.ecoherencia.es/">Ecoherencia, S. Coop. And.</a></span></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Centro de Conservación de la Biodiversidad - Zoobotánico de Jerez Alberto Duran</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Proyecto educativo de Granja de Animales Domésticos Razas Autóctonas Andaluzas (GADA).</p><!----></div> <!--[!--></div></section><section class="work-item"><label for="work-item-1"></label> <header class="clear"><div class="date"><span class="startDate">Oct 2024</span> <!--[!--><span class="endDate">- Current</span></div><!----> <div class="position">Tecnico y educadora ambiental</div> <span class="company"><a target="_blank" href="https://www.linkedin.com/in/brutal-espa%C3%B1a/">Brutal</a></span></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Andalucía</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Analisis de datos, gestión de proyectos, educación ambiental, proyectos de conservación.</p><!----></div> <!--[!--></div></section><section class="work-item"><label for="work-item-2"></label> <header class="clear"><div class="date"><span class="startDate">Apr 2024</span> <span class="endDate">- Apr 2024</span></div><!----> <div class="position">Educador ambiental</div> <span class="company"><a target="_blank" href="https://donana.com/">Doñana Tour</a></span></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Doñana/ El Rocío (Huelva)</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Educación ambiental en el corazón del Parque Nacional de Doñana</p><!----></div> <!--[!--></div></section><section class="work-item"><label for="work-item-3"></label> <header class="clear"><div class="date"><span class="startDate">Nov 2023</span> <span class="endDate">- Feb 2024</span></div><!----> <div class="position">Educador ambiental</div> <span class="company"><a target="_blank" href="https://www.atlantidama.com/">Atlantida Medio Ambiente</a></span></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Pinar de la Algaida (Puerto Real, Cádiz)</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Projecto taller de educación ambiental y concienciación sobre el medio natural y valores ambientales del Parque Metropolitano Pinar de la Algaida y Marisma de los Toruños.</p><!----></div> <!--[!--></div></section><section class="work-item"><label for="work-item-4"></label> <header class="clear"><div class="date"><span class="startDate">Jun 2023</span> <span class="endDate">- Jan 2024</span></div><!----> <div class="position">Educador ambiental</div> <span class="company"><a target="_blank" href="https://www.ecoherencia.es/">Ecoherencia S. Coop. And.</a></span></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Jerez de la Frontera</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Projecto charla-taller de educación ambiental sobre energías renovables en el Centro Energía Viva Andalucía (CEVA)</p><!----></div> <!--[!--></div></section><section class="work-item"><label for="work-item-5"></label> <header class="clear"><div class="date"><span class="startDate">Apr 2023</span> <span class="endDate">- May 2023</span></div><!----> <div class="position">Consultor externo</div> <!--[!--><div class="company">Brutal</div></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Coria del Río</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Censo y seguimiento de proyecto de Quiropteros</p><!----></div> <!--[!--></div></section><section class="work-item"><label for="work-item-6"></label> <header class="clear"><div class="date"><span class="startDate">Feb 2023</span> <span class="endDate">- Mar 2023</span></div><!----> <div class="position">Formador ambiental</div> <span class="company"><a target="_blank" href="https://desarrollocircular.es">Desarrollo Circular Consultoria Ambiental</a></span></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Huelva</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Preparación, puesta en marcha e impartición de projecto charla-taller de educación ambiental por los centros de educación primaria de la ciudad de Huelva</p><!----></div> <!--[!--></div></section><section class="work-item"><label for="work-item-7"></label> <header class="clear"><div class="date"><span class="startDate">Jul 2022</span> <span class="endDate">- Feb 2023</span></div><!----> <div class="position">Técnico medioambiental</div> <span class="company"><a target="_blank" href="https://www.linkedin.com/company/1885266">EKOTONIA CONSULTORES</a></span></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Huelva</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Realización de proyectos y programas de educación ambiental.
+Atención al cliente personalizada:
+Auditoría ambiental, redacción de proyectos.
+Certificaciones ambientales.
+Gestión de redes sociales.
+Redacción de Manuales de Buenas Prácticas y diversa cartelería</p><!----></div> <!--[!--></div></section><section class="work-item"><label for="work-item-8"></label> <header class="clear"><div class="date"><span class="startDate">Apr 2022</span> <span class="endDate">- Jul 2022</span></div><!----> <div class="position">Educadora en Centro Delta Ayamonte</div> <!--[!--><div class="company">Centro Delta Ayamonte</div></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Ayamonte, Huelva</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Clases con alumnos de todos los niveles, desde primaria hasta bachillerato, en materia de matemáticas, biología, física y química (principalmente). Asesoramiento, apoyo, técnicas de estudio, preparación de exámenes y prueba de acceso a la universidad</p><!----></div> <!--[!--></div></section><section class="work-item"><label for="work-item-9"></label> <header class="clear"><div class="date"><span class="startDate">Feb 2020</span> <span class="endDate">- Mar 2020</span></div><!----> <div class="position">Monitora ambiental en Brutal</div> <span class="company"><a target="_blank" href="https://www.linkedin.com/company/42803428">BRUTAL</a></span></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Andalucía</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Actividades eventuales de educación ambiental para toda la familia.
+Safaris y rutas por y para todos los públicos. Desarrollo de actividades y guías didácticas para centros educativos</p><!----></div> <!--[!--></div></section><section class="work-item"><label for="work-item-10"></label> <header class="clear"><div class="date"><span class="startDate">Sept 2013</span> <span class="endDate">- Sept 2017</span></div><!----> <div class="position">Alumno colaborador Dpt. Química Orgánica en Universidad de Córdoba</div> <span class="company"><a target="_blank" href="https://www.linkedin.com/company/78187">Universidad de Córdoba</a></span></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Córdoba, Andalucía, España</span> <!--[!--> <div class="item" id="work-item"><div class="summary"><!----><p>Como alumna colaborador del Departamento de Química Orgánica he podido aprender a usar todo tipo de equipo y técnicas, he tenido la suerte de colaborar en proyectos, trabajos e investigaciones de diversa índole y así como con una gran variedad de profesionales del sector</p><!----></div> <!--[!--></div></section><section class="work-item"><!--[!--> <header class="clear"><div class="date"><span class="startDate">Jun 2016</span> <span class="endDate">- Sept 2016</span></div><!----> <div class="position">Cajera en Supermercados El Jamon</div> <!--[!--><div class="company">Supermercados El Jamon</div></header> <span class="location"><span class="fa-solid fa-location-dot"></span> Ayamonte, Huelva</span> <!--[!--> <div class="item" id="work-item"><!--[!--> <!--[!--></div></section></section></section><!----> <!--[!--><!----> <section class="section"><header><h2 class="section-title">Volunteer <span class="item-count">(4)</span></h2></header> <section id="volunteer"><section class="volunteer-item"><label for="volunteer-item-0"></label> <header class="clear"><!--[!--><!----> <div class="header-left"><div class="position">Monitora y Co-organizadora</div> <div class="organization"><!--[!-->Club de Ciencias Ayamonte</div></div></header> <!--[!--> <!--[!--> <div class="item"><div class="summary"><!----><p>Co-organizadora y monitora del Club Ciencias Ayamonte</p><!----></div> <!--[!--></div></section><section class="volunteer-item"><label for="volunteer-item-1"></label> <header class="clear"><!--[!--><!----> <div class="header-left"><div class="position">Coordinadora y voluntaria</div> <div class="organization"><!--[!-->Sociedad Gaditana de Historia Natural - Grupo Quirópteros</div></div></header> <!--[!--> <!--[!--> <div class="item"><div class="summary"><!----><p>Coordinadora y voluntaria del Grupo de Quirópteros</p><!----></div> <!--[!--></div></section><section class="volunteer-item"><label for="volunteer-item-2"></label> <header class="clear"><!--[!--><!----> <div class="header-left"><div class="position">Voluntaria</div> <div class="organization"><!--[!-->Sociedad Gaditana de Historia Natural - Proyercto de Cría Especies Amenazadas</div></div></header> <!--[!--> <!--[!--> <div class="item"><div class="summary"><!----><p>Voluntaria en Proyecto de Cria de Especies Ibéricas Amenazadas, entre ellas destacan aguilucho cenizo, cernícalo primilla, cerceta pardilla, chotacabras, lechuza común... y del Proyecto Vencejos realizado en parte en el mismo espacio y de manera simultanea al proyecto de cría</p><!----></div> <!--[!--></div></section><section class="volunteer-item"><label for="volunteer-item-3"></label> <header class="clear"><!--[!--><!----> <div class="header-left"><div class="position">Voluntariado</div> <div class="organization"><!--[!-->Sociedad Gaditana de Historia Natural - Proyecto Nóctulo Grande</div></div></header> <!--[!--> <!--[!--> <div class="item"><div class="summary"><!----><p>Voluntariado y seguimiento del Noctulo Grande</p><!----></div> <!--[!--></div></section></section></section><!----> <section class="section"><header><h2 class="section-title">Education <span class="item-count">(5)</span></h2></header> <section id="education"><section class="education-item"><!--[!--> <header class="clear"><div class="date"><span class="startDate">Apr 2023</span> <span class="endDate">- May 2023</span></div><!----> <div class="header-left"><div class="studyType">Curso SICTED nuevos agentes</div> <!--[!--> <div class="institution"><!--[!-->Secretaría de Estado de Turismo</div></div></header> <!--[!--> <!--[!--> <div class="item"><!--[!--> <!--[!--></div></section><section class="education-item"><!--[!--> <header class="clear"><div class="date"><span class="startDate">Dec 2020</span> <span class="endDate">- Dec 2021</span></div><!----> <div class="header-left"><div class="studyType">Curso de Peritaje Ambiental</div> <!--[!--> <div class="institution"><!--[!-->COAMBA</div></div></header> <!--[!--> <!--[!--> <div class="item"><!--[!--> <!--[!--></div></section><section class="education-item"><!--[!--> <header class="clear"><div class="date"><span class="startDate">Dec 2017</span> <span class="endDate">- Dec 2020</span></div><!----> <div class="header-left"><div class="studyType">Grado en Ciencias Ambientales</div> <!--[!--> <div class="institution"><!--[!-->Universidad de Huelva</div></div></header> <!--[!--> <!--[!--> <div class="item"><!--[!--> <!--[!--></div></section><section class="education-item"><!--[!--> <header class="clear"><div class="date"><span class="startDate">Dec 2012</span> <span class="endDate">- Dec 2017</span></div><!----> <div class="header-left"><div class="studyType">Grado en Ciencias Ambientales</div> <!--[!--> <div class="institution"><!--[!-->Universidad de Córdoba</div></div></header> <!--[!--> <!--[!--> <div class="item"><!--[!--> <!--[!--></div></section><section class="education-item"><!--[!--> <header class="clear"><!--[!--><!----> <div class="header-left"><div class="studyType">Cursos Online</div> <!--[!--> <div class="institution"><!--[!-->Junta de Andalucía</div></div></header> <!--[!--> <ul class="courses"><li>Iniciación a Python</li><li>Dinamizador/a de cursos elearning (Avanzado)</li><li>Retoque fotográfico con GIMP</li><li>Iniciación a la programación</li><li>Iniciación al diseño y a la programación web</li></ul> <div class="item"><!--[!--> <!--[!--></div></section></section></section><!----> <!--[!--><!----> <!--[!--><!----> <!--[!--><!----> <section class="section"><header><h2 class="section-title">Languages <span class="item-count">(2)</span></h2></header> <section id="languages"><div class="display"><h3 class="language">Espanol</h3> <div class="item"><div class="level fluency master"><!--[!--><em>Native speaker</em> <div class="bar"></div></div></div></div><div class="display"><h3 class="language">Ingles</h3> <div class="item"><div class="level fluency advanced"><!--[!--><em>Fluent</em> <div class="bar"></div></div></div></div></section></section><!----> <!--[!--><!----> <!--[!--><!----></main>
   </body>
 </html>
