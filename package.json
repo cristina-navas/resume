@@ -1,7 +1,7 @@
 {
   "scripts": {
     "render-html": "npx resumed render --output docs/index.html",
-    "render-pdf": "npx resume export --resume resume.json --theme jsonresume-theme-stackoverflow resume.pdf ",
+    "render-pdf": "npx resumed export resume.json --output resume.pdf --theme jsonresume-theme-stackoverflow --puppeteer-arg --no-sandbox",
     "validate": "npx resumed validate resume.json",
     "prepare": "husky"
   },
