@@ -5,7 +5,7 @@
     "label": "Técnico en Educación Ambiental",
     "image": "",
     "email": "cristina.navas869@gmail.com",
-    "summary": "Soy una profesional en constante evolución, motivada por asumir nuevos retos y adaptarme a entornos dinámicos. A lo largo de mi trayectoria, he ampliado y consolidado mis habilidades mediante el aprendizaje continuo y la experiencia práctica, lo que me permite abordar proyectos con autonomía, compromiso y enfoque en resultados. \n Me caracterizo por mi capacidad de ejecución, pensamiento crítico y orientación a objetivos ambiciosos, siempre integrando criterios de sostenibilidad y mejora ambiental en mi trabajo. Además, cuento con sólidas habilidades comunicativas y sociales, que facilitan el trabajo en equipo, la colaboración efectiva y la creación de entornos laborales positivos.",
+    "summary": "Soy una profesional en constante evolución, motivada por asumir nuevos retos y adaptarme a entornos dinámicos. A lo largo de mi trayectoria, he ampliado y consolidado mis habilidades mediante el aprendizaje continuo y la experiencia práctica, lo que me permite abordar proyectos con autonomía, compromiso y enfoque en resultados. \n\n Me caracterizo por mi capacidad de ejecución, pensamiento crítico y orientación a objetivos ambiciosos, siempre integrando criterios de sostenibilidad y mejora ambiental en mi trabajo. Además, cuento con sólidas habilidades comunicativas y sociales, que facilitan el trabajo en equipo, la colaboración efectiva y la creación de entornos laborales positivos.",
     "location": {
       "countryCode": "ES",
       "address": "Jerez de la Frontera (Cádiz) España"
@@ -197,6 +197,7 @@
   ],
   "meta": {
     "version": "v1.0.0",
-    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
+    "theme": "jsonresume-theme-stackoverflow"
   }
 }
